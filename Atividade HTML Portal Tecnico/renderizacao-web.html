@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Como os Browsers Renderizam Páginas Web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<header id="topo">
+    <h1>Como os Browsers Renderizam Páginas Web</h1>
+    <p>Documentação introdutória sobre o processo de renderização em navegadores.</p>
+
+    <nav>
+        <ul>
+            <li><a href="#dom">DOM</a></li>
+            <li><a href="#cssom">CSSOM</a></li>
+            <li><a href="#render-tree">Render Tree</a></li>
+            <li><a href="#layout">Layout</a></li>
+            <li><a href="#paint">Paint</a></li>
+            <li><a href="#etapas">Etapas</a></li>
+            <li><a href="#comparacao">Comparação</a></li>
+        </ul>
+    </nav>
+</header>
+
+<hr>
+
+<main>
+
+    <section id="dom">
+        <h2>Construção do DOM</h2>
+        <p>
+            O <strong>DOM</strong> (<abbr title="Document Object Model">Document Object Model</abbr>) 
+            é construído a partir do parsing do HTML.
+        </p>
+
+        <article>
+            <h3>Exemplo de Estrutura HTML</h3>
+            <p>O navegador interpreta o código e cria uma árvore de nós.</p>
+
+            <pre><code>&lt;body&gt;
+    &lt;h1&gt;Título&lt;/h1&gt;
+&lt;/body&gt;</code></pre>
+        </article>
+
+        <p><a href="#topo">Voltar ao topo</a></p>
+    </section>
+
+    <hr>
+
+    <section id="cssom">
+        <h2>Construção do CSSOM</h2>
+        <p>
+            O <strong>CSSOM</strong> representa os estilos aplicados ao documento.
+            Ele é criado a partir da leitura dos arquivos CSS.
+        </p>
+
+        <p><a href="#topo">Voltar ao topo</a></p>
+    </section>
+
+    <hr>
+
+    <section id="render-tree">
+        <h2>Render Tree</h2>
+        <p>
+            A <em>Render Tree</em> combina informações do DOM e do CSSOM,
+            considerando apenas elementos visíveis.
+        </p>
+
+        <figure>
+            <picture>
+                <source srcset="render-small.png" media="(max-width: 600px)">
+                <img src="render-large.png"
+                     alt="Diagrama simplificado do processo de renderização"
+                     width="600"
+                     height="400"
+                     loading="lazy">
+            </picture>
+            <figcaption>Representação simplificada da Render Tree.</figcaption>
+        </figure>
+
+        <p><a href="#topo">Voltar ao topo</a></p>
+    </section>
+
+    <hr>
+
+    <section id="layout">
+        <h2>Layout</h2>
+        <p>
+            O processo de <mark>Layout</mark> calcula tamanho e posicionamento
+            dos elementos na página.
+        </p>
+
+        <p><a href="#topo">Voltar ao topo</a></p>
+    </section>
+
+    <hr>
+
+    <section id="paint">
+        <h2>Paint</h2>
+        <p>
+            A etapa de Paint desenha os pixels na tela com base nas informações
+            calculadas anteriormente.
+        </p>
+
+        <blockquote>
+            "O navegador converte HTML em DOM e CSS em CSSOM antes de calcular o layout."
+        </blockquote>
+
+        <p><a href="#topo">Voltar ao topo</a></p>
+    </section>
+
+    <hr>
+
+    <section id="etapas">
+        <h2>Etapas da Renderização</h2>
+
+        <ol>
+            <li>Construção do DOM</li>
+            <li>Construção do CSSOM</li>
+            <li>Criação da Render Tree</li>
+            <li>Layout</li>
+            <li>Paint</li>
+        </ol>
+
+        <p><a href="#topo">Voltar ao topo</a></p>
+    </section>
+
+    <hr>
+
+    <section id="comparacao">
+        <h2>Comparação entre DOM e CSSOM</h2>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>DOM</th>
+                    <th>CSSOM</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Representa a estrutura HTML</td>
+                    <td>Representa os estilos CSS</td>
+                </tr>
+                <tr>
+                    <td>Define o conteúdo</td>
+                    <td>Define a apresentação visual</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p><a href="#topo">Voltar ao topo</a></p>
+    </section>
+
+</main>
+
+<hr>
+
+<aside>
+    <h3>Referências Externas</h3>
+    <ul>
+        <li>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/Performance/How_browsers_work"
+               target="_blank"
+               rel="noopener noreferrer">
+               MDN Web Docs
+            </a>
+        </li>
+        <li>
+            <a href="https://html.spec.whatwg.org/"
+               target="_blank"
+               rel="noopener noreferrer">
+               HTML Living Standard
+            </a>
+        </li>
+    </ul>
+</aside>
+
+<hr>
+
+<footer>
+    <p>Autor: Seu Nome</p>
+    <p>
+        Publicado em:
+        <time datetime="2026-03-02">02 de março de 2026</time>
+    </p>
+    <p>
+        Contato:
+        <a href="mailto:seuemail@email.com">Enviar e-mail</a>
+    </p>
+</footer>
+
+</body>
+</html>
